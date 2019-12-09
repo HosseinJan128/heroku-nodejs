@@ -1,6 +1,6 @@
 var express = require('express'),
   app = express(),
-  port = process.env.PORT || 3005,
+  port = process.env.PORT || 8000,
   mongoose = require('mongoose'),
   Task = require('./api/models/todoListModel'), //created model loading here
   bodyParser = require('body-parser');
@@ -44,7 +44,9 @@ app.use(function(req, res) {
 });
 
 
-app.listen(port);
+app.listen(port, () => {
+  console.log("App is running on port " + port);
+});
 
 
 console.log('todo list RESTful API server started on: ' + port);
