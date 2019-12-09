@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content
+    .pricing-header.px-3.py-3.pt-md-5.pb-md-4.mx-auto.text-center
+    h1.display-4 Pricing
+    p.lead
+        | Quickly build an effective pricing table for your potential customers with this Bootstrap example. It&rsquo;s built with default Bootstrap components and utilities with little customization.
+    .card-deck.mb-3.text-center
+    each product , i in products
+        .card.mb-4.shadow-sm
+            .card-header
+            h4.my-0.font-weight-normal #{product.name}
+            .card-body
+            h1.card-title.pricing-card-title
+                | $#{product.price}
+                small.text-muted / mo
+            ul.list-unstyled.mt-3.mb-4
+                li 20 users included
+                li 10 GB of storage
+                li Priority email support
+                li Help center access
+            button.btn.btn-lg.btn-block.btn-primary(type='button') Pay
