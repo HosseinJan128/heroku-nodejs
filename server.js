@@ -16,6 +16,12 @@ mongoose.connect('mongodb://localhost/Tododb');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.get('/', function (req, res) {
+  res.render('index.pug', {
+    title: "Website",
+ });
+});
+
 app.use(function(req, res, next){
   if(req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT'){
     jsonwebtoken.verify(req.headers.authorization.split(' ')[1], 'RESTFULAPIs', function(err, decode){
