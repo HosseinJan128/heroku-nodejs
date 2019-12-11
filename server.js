@@ -10,7 +10,8 @@ var User = require('./api/models/userModel'),
   
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/Tododb'); 
+//mongoose.connect('mongodb://localhost/Tododb'); 
+mongoose.connect('mongodb://ufdocgznpjsg7w5zf5el:mwqTioOLfWNlmZIJ1msK@bj2m0zrcouystc1-mongodb.services.clever-cloud.commongodb://ufdocgznpjsg7w5zf5el:mwqTioOLfWNlmZIJ1msK@bj2m0zrcouystc1-mongodb.services.clever-cloud.com:27017/bj2m0zrcouystc1'); 
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
